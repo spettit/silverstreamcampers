@@ -11,13 +11,13 @@ const Jumbo = styled.div`
   align-items: flex-end;
   justify-content: center;
   margin: 0px auto;
-  width: 380px;
+  width: 70vw;
   height: 380px;
   border: 10px solid white;
   background-image: url(${vintagespartan});
-  background-position: -250px -200px;
+  background-position: 0px -300px;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   filter: sepia(1);
   ${'' /* filter: blur(2px); */}
   margin-bottom: 50px;
@@ -40,13 +40,15 @@ const H3 = styled.h3`
 `
 
 const Content = styled.div`
-  height: calc(100vh - 180px);
+  position: relative;
+  height: calc(200vh);
   background-color: #78BBBB;
   background-image: url(${texture});
 `
 
 const IndexPage = () => (
   <Content>
+    <div style={{height: 180, backgroundColor: 'white'}}></div>
     <H3>we love rare vintage american travel trailers</H3>
     <Jumbo>
 

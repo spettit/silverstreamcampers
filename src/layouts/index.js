@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div style={{postition: 'relative'}}>
     <Helmet
       title="silverdreamcampers"
       meta={[

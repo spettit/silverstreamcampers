@@ -6,7 +6,11 @@ import atom from '../../images/Atom2.png'
 import texture from '../../images/texture.png'
 
 const NavContainer = styled.div`
+  position: fixed;
+  top: 0;
+  z-index: 2;
   height: 180px;
+  width: 100vw;
   background-color: #78BBBB;
   background-image: url(${texture});
   display: flex;
@@ -15,6 +19,7 @@ const NavContainer = styled.div`
   padding-right: 10px;
   padding-top: 10px;
   align-items: center;
+  box-shadow: 2px 2px 2px gray;
 `
 
 const Logo = styled.img`
