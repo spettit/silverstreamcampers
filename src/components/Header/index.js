@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import logo from '../../images/logo5.png'
+import logo from '../../images/Logo5.png'
 import atom from '../../images/Atom2.png'
 import texture from '../../images/texture.png'
 
