@@ -23,6 +23,7 @@ import Img from 'gatsby-image'
 const Div = styled.div`
   padding: 15px;
   background-color: white;
+  
   ${'' /* max-height: 400px; */}
 
 
