@@ -22,8 +22,6 @@ const SecondPage = ({data}) => (
       <SimpleSlider />
     </div>
     <Img sizes = {data.contentfulAsset.sizes} />
-
-
   </Content>
 )
 
