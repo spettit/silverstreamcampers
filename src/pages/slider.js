@@ -7,27 +7,38 @@ import spartan from './spartan.jpeg'
 import spartansepia from './spartansepia.jpg'
 import spartanpainting from './spartanpainting.jpg'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
-const Img = styled.img`
-  height: 400px;
-  width: 100vw;
-  object-fit: cover;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  padding-left: 0;
-
-`
+// const Img = styled.img`
+//   height: 400px;
+//   width: 100vw;
+//   object-fit: cover;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 0;
+//   padding-left: 0;
+//
+// `
 
 const Div = styled.div`
   padding: 15px;
-  background-color: orange;
+  background-color: white;
+  ${'' /* max-height: 400px; */}
 
 
 `
 
 class SimpleSlider extends React.Component {
+  renderImages() {
+    console.log(this.props.sizes.edges)
+    return this.props.sizes.edges.map((edge) => {
+      return (
+        <Div><Img key={edge.node.id} sizes={edge.node.sizes} style={{height: '400px'}}/></Div>
+      )
+    })
+  }
   render() {
+
     var settings = {
       dots: true,
       infinite: true,
@@ -44,9 +55,10 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Slider {...settings}>
-        <Div><Img src={spartanpainting} /></Div>
-        <Div><Img src={spartan} /></Div>
-        <Div><Img src={spartansepia} /></Div>
+        {/* <Div><Img sizes={this.props.sizes} /></Div> */}
+        {/* <Div><Img src={spartan} /></Div>
+        <Div><Img src={spartansepia} /></Div> */}
+        {this.renderImages()}
       </Slider>
     );
   }

@@ -18,10 +18,9 @@ const Content = styled.div`
 
 const SecondPage = ({data}) => (
   <Content>
-    <div style={{marginTop: '180'}}>
-      <SimpleSlider />
+    <div style={{marginTop: '180px'}}>
+      <SimpleSlider sizes = {data.allContentfulAsset}/>
     </div>
-    <Img sizes = {data.contentfulAsset.sizes} />
   </Content>
 )
 
@@ -29,17 +28,22 @@ export default SecondPage
 
 export const mediaQuery = graphql`
   query MediaQuery {
-    contentfulAsset {
-      sizes {
-        base64
-        aspectRatio
-        src
-        srcSet
-        srcWebp
-        srcSetWebp
-        sizes
+    allContentfulAsset {
+    edges {
+      node {
+        id
+        sizes {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+        }
       }
     }
+  }
 }
 
 `;
