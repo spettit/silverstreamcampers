@@ -26,7 +26,6 @@ const Div = styled.div`
 
 `
 
-
 class SimpleSlider extends React.Component {
   render() {
     var settings = {
