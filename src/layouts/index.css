@@ -25,7 +25,13 @@
 }
 
 
-
+.link {
+  color: white;
+  text-decoration: none;
+  font-family: 'peralta', 'regular';
+  font-weight:lighter;
+  font-variant: small-caps;
+}
 
 
 
