@@ -3,9 +3,9 @@ import Link from 'gatsby-link'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import spartan from './spartan.jpeg'
-import spartansepia from './spartansepia.jpg'
-import spartanpainting from './spartanpainting.jpg'
+// import spartan from './spartan.jpeg'
+// import spartansepia from './spartansepia.jpg'
+// import spartanpainting from './spartanpainting.jpg'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
@@ -23,18 +23,19 @@ import Img from 'gatsby-image'
 const Div = styled.div`
   padding: 15px;
   background-color: white;
-  
+
   ${'' /* max-height: 400px; */}
 
 
 `
 
 class SimpleSlider extends React.Component {
+
   renderImages() {
-    console.log(this.props.sizes.edges)
-    return this.props.sizes.edges.map((edge) => {
+    console.log(this.props.sizes[0].sizes)
+    return this.props.sizes.map((size) => {
       return (
-        <Div><Img key={edge.node.id} sizes={edge.node.sizes} style={{height: '400px'}}/></Div>
+        <Div key={size.id}><Img sizes={size.sizes} style={{height: '400px'}}/></Div>
       )
     })
   }

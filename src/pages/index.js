@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 // import spartan from './spartan.jpeg'
-import spartansepia from './spartansepia.jpg'
+// import spartansepia from './spartansepia.jpg'
 import texture from '../images/texture.png'
 import vintagespartan from '../images/vintage-spartan.jpg'
 

@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 // import spartan from './spartan.jpeg'
-import spartansepia from './spartansepia.jpg'
+// import spartansepia from './spartansepia.jpg'
 import texture from '../images/texture.png'
-import vintagespartan from '../images/vintage-spartan.jpg'
-import SimpleSlider from './slider'
+// import vintagespartan from '../images/vintage-spartan.jpg'
+import SimpleSlider from '../components/slider'
 import Img from 'gatsby-image'
 
 
@@ -19,7 +19,7 @@ const Content = styled.div`
 const SecondPage = ({data}) => (
   <Content>
     <div style={{marginTop: '180px'}}>
-      <SimpleSlider sizes = {data.allContentfulAsset}/>
+      <SimpleSlider sizes = {data.contentfulFrontPage.carouselImages}/>
     </div>
   </Content>
 )
@@ -28,9 +28,9 @@ export default SecondPage
 
 export const mediaQuery = graphql`
   query MediaQuery {
-    allContentfulAsset {
-    edges {
-      node {
+    contentfulFrontPage {
+      id
+      carouselImages {
         id
         sizes {
           base64
@@ -44,6 +44,6 @@ export const mediaQuery = graphql`
       }
     }
   }
-}
+
 
 `;
