@@ -1,10 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-// import spartan from './spartan.jpeg'
-// import spartansepia from './spartansepia.jpg'
 import texture from '../images/texture.png'
-// import vintagespartan from '../images/vintage-spartan.jpg'
 import SimpleSlider from '../components/Slider'
 import Img from 'gatsby-image'
 
@@ -18,7 +15,7 @@ const Content = styled.div`
 
 const AboutPage = ({data}) => (
   <Content>
-    
+
   </Content>
 )
 

@@ -3,30 +3,12 @@ import Link from 'gatsby-link'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-// import spartan from './spartan.jpeg'
-// import spartansepia from './spartansepia.jpg'
-// import spartanpainting from './spartanpainting.jpg'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-
-// const Img = styled.img`
-//   height: 400px;
-//   width: 100vw;
-//   object-fit: cover;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-bottom: 0;
-//   padding-left: 0;
-//
-// `
 
 const Div = styled.div`
   padding: 15px;
   background-color: white;
-
-  ${'' /* max-height: 400px; */}
-
-
 `
 
 class SimpleSlider extends React.Component {
@@ -57,14 +39,10 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Slider {...settings}>
-        {/* <Div><Img sizes={this.props.sizes} /></Div> */}
-        {/* <Div><Img src={spartan} /></Div>
-        <Div><Img src={spartansepia} /></Div> */}
         {this.renderImages()}
       </Slider>
     );
   }
 }
-
 
 export default SimpleSlider

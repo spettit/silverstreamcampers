@@ -21,7 +21,6 @@ const NavContainer = styled.div`
   padding-top: 10px;
   align-items: center;
   box-shadow: 0px 2px 2px gray;
-  ${'' /* margin-right: 0; */}
 `
 
 const BannerContainer = styled.div`

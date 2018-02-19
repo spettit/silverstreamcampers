@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import texture from '../images/texture.png'
 import SimpleSlider from '../components/Slider'
 
-
-
 const H3 = styled.h3`
   text-align: center;
   font-family: 'peralta', 'regular';
@@ -32,9 +30,6 @@ const IndexPage = ({data}) => (
       <SimpleSlider sizes = {data.contentfulFrontPage.carouselImages}/>
     </div>
   </Content>
-
-
-
 )
 
 export default IndexPage
@@ -57,4 +52,4 @@ export const mediaQuery = graphql`
       }
     }
   }
-`;
+`
